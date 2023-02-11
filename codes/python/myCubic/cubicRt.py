@@ -6,9 +6,7 @@ def CubRT(x,debug=False,convergenceRate=False,zeroCase= True):
 	"""
 	x: the number whose cubic root is to be calculated
 	convergenceRate: True to see convergence rate printed.
-
 	"""
-	from numpy import nan
 	from numpy import cbrt
 	if zeroCase:
 		if x==0.:
