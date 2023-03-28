@@ -1,0 +1,39 @@
+######################################
+> wc filename -word count
+line words character filename.txt
+> wc -l filename - only line count
+
+#############################
+Capture Ouput (> or >>)
+> change file every time
+>> append to file
+> wc filename > wordcount.txt 
+
+############################# 
+Filters
+> sort -n wordcounnt.txt -numeriacal sort
+> head -n 1 sorted.txt - first line
+> cut -d , 
+> uniq -c
+#############################
+pipe add cmd ( | ) first command run after that second cmd
+> sort -n word.txt | head -n 1
+
+############################# loop
+for i in list
+do
+   echo $i
+done
+
+
+nested loops also possible
+
+############################ shell script .sh
+nano script.sh
+to run script
+> bash script.sh
+in script "$1" means first filename
+"$@" means every filename mentioned in cmd
+> bash script.sh '*.pdb' 1 2 
+
+

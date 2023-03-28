@@ -1,0 +1,73 @@
+# for manual type 'man' before cmd... man ls or ls --help
+# environmental Variable
+export abc=$PWD
+cd $abc/def
+######################################
+$ ls -F /
+$ - prompt
+ls - command
+-F - Option
+/ - argument
+######################################
+> pwd - Present working directory
+.. - back one
+> history
+######################################
+> cd - change directory
+cd .. - back one up directory
+cd -  - last directory
+cd  - home
+cd ~/ - users directory start
+######################################
+> ls - list
+> ls -F - show directory structure.
+* -executable
+/ - directory
+@ -link
+> ls -l -long listing format
+> ls -S  - sort ... for different options check manual
+two option at same time
+> ls -lh - h for human readable
+> ls  directoryinPWD
+######################################
+tab -autocompletes
+tab tab -ls/directory/tab tab - shows directories in there
+######################################
+> mkdir -make directory
+> mkdir -p a/b c/d - make multiple directories(folder structure)
+
+> cp -copy...... cp -r for directory
+> rm -remove ... rm -r -remove directory... rm -i -prompt
+> mv -move (also used to rename)
+> grep abc filename.txt -find or 'abc'
+
+######################################
+Wild Card
+* -everything... *.txt or 
+ab*.txt -filename with ab
+?a.txt - only fill one alphabit ca,da etc
+??c.txt - fill two abc.txt
+> cp *b* directory - copy every file(folder use -r option) with b to directory
+
+ctrl+r -reverse i search
+!! - immediate last cmd
+cat !$ - cat + last command
+
+put inside $() 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
