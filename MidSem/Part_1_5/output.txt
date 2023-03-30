@@ -1,0 +1,10 @@
+Testing with pi = 100
+pi_montecarlo = 3.04, numpy pi = 3.141592653589793
+Testing with pi = 1000
+pi_montecarlo = 3.072, numpy pi = 3.141592653589793
+Testing with pi = 10000
+pi_montecarlo = 3.112, numpy pi = 3.141592653589793
+Testing with pi = 100000
+pi_montecarlo = 3.15012, numpy pi = 3.141592653589793
+Testing with pi = 1000000
+pi_montecarlo = 3.141664, numpy pi = 3.141592653589793
