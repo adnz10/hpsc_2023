@@ -43,6 +43,7 @@ program monte_carlo_pi
         endif
 
     enddo
+    !$omp end parallel do
     inside = inside0+inside1+inside2+inside3
     print *, inside, "points fall inside the circle out of", num_points, "points"
             
