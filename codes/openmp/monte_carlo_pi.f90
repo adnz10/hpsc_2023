@@ -1,7 +1,7 @@
 program monte_carlo_pi
-
+    use omp_lib
     implicit none
-    integer :: i,inside,num_points
+    integer :: i,inside,inside0,inside1,inside2,inside3,num_points,thread_num,nthread
     real(kind=8) :: x,y,dist,estimate_pi
     character(len=32) :: arg
     
@@ -11,7 +11,12 @@ program monte_carlo_pi
     read(arg , *) num_points
 
     !print *, num_points
-    inside = 0    
+    inside0 = 0
+    inside1 = 0
+    inside2 = 0
+    inside3 = 0
+    !$ call omp_set_num_threads(4)
+    !$omp parallel do private(x,y,dist)    
     do i=1,num_points
 
         call random_number(x)
@@ -23,13 +28,22 @@ program monte_carlo_pi
 
         dist=sqrt(x**2 + y**2)
         !print *, "dist=", dist
+        !$ nthread = omp_get_thread_num()
             
         if (dist < 0.5) then
-            inside = inside + 1
-            !print *, "i=", i, "inside=",inside
+                !$ if (nthread == 0) then
+                        inside0 = inside0 + 1
+                !$ elseif (nthread == 1) then
+                !$      inside1 = inside1 + 1
+                !$ elseif (nthread == 2) then
+                !$      inside2 = inside2 + 1
+                !$ else
+                !$      inside3 = inside3 + 1
+                !$ endif
         endif
 
     enddo
+    inside = inside0+inside1+inside2+inside3
     print *, inside, "points fall inside the circle out of", num_points, "points"
             
     estimate_pi = (inside * 4.d0) / num_points
